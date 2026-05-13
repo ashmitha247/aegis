@@ -1,0 +1,13 @@
+{
+  "name": "Aegis",
+  "description": "A digital sanctuary for women’s health journeys, providing shared wisdom, protective community, and intelligent health tracking.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "AI-powered symptom analytics",
+    "Ancient sanctuary-inspired UI",
+    "Shared Wisdom doctor directory",
+    "Anonymous community support"
+  ]
+}

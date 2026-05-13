@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-ivory: #FDFCF0;
+  --color-parchment: #F5E6CC;
+  --color-gold: #C5A059;
+  --color-olive: #6B705C;
+  --color-terracotta: #A53F2B;
+  --color-indigo: #1B263B;
+  --color-bronze: #8D6E63;
+  
+  --color-primary: #1B263B;
+  --color-secondary: #6B705C;
+  --color-accent: #C5A059;
+  --color-background: #FDFCF0;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-indigo font-sans selection:bg-gold/30;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.manuscript-card {
+  @apply bg-white rounded-3xl border border-parchment shadow-sm transition-all hover:shadow-md relative overflow-hidden;
+  background-image: radial-gradient(circle at top right, rgba(245, 230, 204, 0.2) 0%, transparent 70%);
+}
+
+.manuscript-card::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold/20 to-transparent;
+}
+
+.btn-primary {
+  @apply bg-indigo text-ivory px-6 py-3 rounded-2xl font-medium transition-all active:scale-95 shadow-lg shadow-indigo/20 flex items-center justify-center gap-2 border border-indigo/10;
+}
+
+.btn-secondary {
+  @apply bg-olive text-ivory px-6 py-3 rounded-2xl font-medium transition-all active:scale-95 shadow-lg shadow-olive/10 flex items-center justify-center gap-2;
+}
+
+.btn-outline {
+  @apply bg-transparent border-2 border-gold/40 text-indigo px-6 py-3 rounded-2xl font-medium transition-all active:scale-95 flex items-center justify-center gap-2 hover:bg-gold/5;
+}
+
+.input-field {
+  @apply w-full bg-white/80 border border-parchment rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold/30 transition-all font-sans;
+}
+
+.olive-divider {
+  @apply flex items-center gap-4 py-4 opacity-30;
+}
+
+.olive-divider::before, .olive-divider::after {
+  content: '';
+  @apply h-px flex-1 bg-gold;
+}
+
+.temple-glow {
+  box-shadow: 0 0 30px rgba(197, 160, 89, 0.1);
+}
